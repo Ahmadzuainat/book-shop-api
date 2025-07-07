@@ -12,7 +12,7 @@ This project follows the MVC architecture and supports full CRUD operations.
 - Add a new book ➕
 - Update book details ✏️
 - Delete a book ❌
-- Clean project structure (MVC)
+- Clean project structure using MVC
 
 ---
 
@@ -22,10 +22,23 @@ This project follows the MVC architecture and supports full CRUD operations.
 - [Express](https://expressjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [pg](https://node-postgres.com/)
+- [pg (node-postgres)](https://node-postgres.com/)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 
 ---
 
-## 📂 Project Structure
+---
+
+## 🗄️ Database Design
+
+Database: `book`  
+Table: `books_shop`
+
+| Column          | Type     | Description               |
+|-----------------|----------|---------------------------|
+| `id`            | SERIAL   | Primary key               |
+| `title`         | TEXT     | Book title                |
+| `author`        | TEXT     | Book author               |
+| `price`         | FLOAT    | Book price                |
+| `published_date`| DATE     | Date published            |
 
