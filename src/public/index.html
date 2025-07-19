@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans">
+    <header class="bg-gray-900 text-white px-4 py-3 flex justify-between items-center shadow">
+      <h1 class="text-2xl font-bold">📚 Book Shop</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Add Book</a>
+        <button id="mode-toggle" class="ml-4 text-yellow-400">🌙 Dark Mode</button>
+      </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Book List</h2>
+      <div id="book-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10"></div>
+
+      <h2 class="text-2xl font-semibold mb-4">Add / Update Book</h2>
+      <form id="book-form" class="space-y-4">
+        <input
+          type="text"
+          id="title"
+          placeholder="Title"
+          class="w-full p-2 rounded bg-gray-200 dark:bg-gray-700"
+          required
+        />
+        <input
+          type="text"
+          id="author"
+          placeholder="Author"
+          class="w-full p-2 rounded bg-gray-200 dark:bg-gray-700"
+          required
+        />
+        <div class="flex gap-4">
+          <input
+            type="number"
+            id="price"
+            placeholder="Price"
+            class="w-full p-2 rounded bg-gray-200 dark:bg-gray-700"
+            required
+          />
+          <input
+            type="date"
+            id="published_date"
+            class="w-full p-2 rounded bg-gray-200 dark:bg-gray-700"
+            required
+          />
+        </div>
+        <div class="flex gap-4">
+          <button
+            id="submitBtn"
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full"
+          >
+            Add Book
+          </button>
+          <button
+            type="button"
+            id="cancelEditBtn"
+            class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded w-full hidden"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
